@@ -1,4 +1,4 @@
-# atom
+![alt text](https://github.com/thekesslereffect/atom/blob/master/atom/atom.png)
 
 zbrush zscripts by kessler
 
