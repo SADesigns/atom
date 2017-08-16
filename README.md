@@ -1,2 +1,2 @@
 # atom
-zbrush zscripts
+zbrush zscripts by kessler
