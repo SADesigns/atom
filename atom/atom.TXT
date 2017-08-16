@@ -313,7 +313,7 @@
 
 [IButton, "ZPlugin:atom:project n subdivs", "projects on user specified number of subdivisions",  
 	[VarSet, SubtoolName, [IGetTitle, Tool:Subtool:ItemInfo]]  
-	[Loop, [IGet, ZPlugin:atom:divisions]-1, [IPress,Tool:Geometry:Divide]]  
+	[Loop, [IGet, ZPlugin:atom:divisions]-1, [IPress,Tool:Geometry:Divide][IPress,Tool:SubTool:ProjectAll]] 
 	[Note, [StrMerge, SubtoolName, " has been projected onto ", [IGet, ZPlugin:atom:divisions]-1," divisions"]]
 ]
 [ISlider, ZPlugin:atom:divisions, 1,1,1,10, "number of division to make and project", ,]
