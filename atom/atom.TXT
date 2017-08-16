@@ -310,9 +310,13 @@
 [ISlider, ZPlugin:atom:copies, 1,1,1,20, "number of copies", ,]
 
 /*Project Every Subdivision*/
-[IButton,"ZPlugin:atom:project all subdivs","projects all on every subdivision onto a layer",
-  [Note, "this shit doesn't work yet"]
+
+[IButton, "ZPlugin:atom:project n subdivs", "projects on user specified number of subdivisions",  
+	[VarSet, SubtoolName, [IGetTitle, Tool:Subtool:ItemInfo]]  
+	[Loop, [IGet, ZPlugin:atom:divisions]-1, [IPress,Tool:Geometry:Divide]]  
+	[Note, [StrMerge, SubtoolName, " has been projected onto ", [IGet, ZPlugin:atom:divisions]-1," divisions"]]
 ]
+[ISlider, ZPlugin:atom:divisions, 1,1,1,10, "number of division to make and project", ,]
 
 /*Remove Surface Definitiion*/
 [IButton,"ZPlugin:atom:remove surface","smooths out scan data",
