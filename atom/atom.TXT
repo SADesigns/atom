@@ -306,7 +306,7 @@
 
 /* Duplicate Subtool */
 
-[IButton, "ZPlugin:atom:copy sub", "copies subtool",
+[IButton, "ZPlugin:atom:copy mesh", "copies subtool",
   [VarSet, SubtoolName, [IGetTitle, Tool:Subtool:ItemInfo]]
   [Loop, [IGet, ZPlugin:atom:copies], [IPress, Tool:SubTool:Duplicate]]
   [Note, [StrMerge, SubtoolName, " has been copied ", [IGet, ZPlugin:atom:copies]," times"]]
