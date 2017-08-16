@@ -313,6 +313,10 @@
 ]
 [ISlider, ZPlugin:atom:copies, 1,1,1,20, "number of copies", ,]
 
+/*WIPS*/
+[IButton,"ZPlugin:atom:||WORKS IN PROGRESS BELOW","about atom",
+  [Note, "thanks for using atom -kessler"]
+,,1,, ,0.2]
 
 /*Close Holes*/
 [IButton,"ZPlugin:atom:close holes","close holes with specific resolution",
