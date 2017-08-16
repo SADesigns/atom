@@ -294,26 +294,15 @@
 [Note, "all floaters have been removed"]
 ]
 
-/*Close Holes*/
-[IButton,"ZPlugin:atom:close holes","close holes with specific resolution",
-  [Note, "this shit doesn't work yet"]
-]
-[ISlider, ZPlugin:atom:resolution, 1,1,1,20, "resolution of hole fill", ,]
-
-
 /*Project Every Subdivision*/
 
-[IButton, "ZPlugin:atom:project n subdivs", "projects on user specified number of subdivisions",  
+[IButton, "ZPlugin:atom:project sub", "projects on user specified number of subdivisions",  
 	[VarSet, SubtoolName, [IGetTitle, Tool:Subtool:ItemInfo]]  
 	[Loop, [IGet, ZPlugin:atom:divisions]-1, [IPress,Tool:Geometry:Divide][IPress,Tool:SubTool:ProjectAll]] 
 	[Note, [StrMerge, SubtoolName, " has been projected onto ", [IGet, ZPlugin:atom:divisions]-1," divisions"]]
 ]
 [ISlider, ZPlugin:atom:divisions, 1,1,1,10, "number of division to make and project", ,]
 
-/*Remove Surface Definitiion*/
-[IButton,"ZPlugin:atom:remove surface","smooths out scan data",
-  [Note, "this shit doesn't work yet"]
-]
 
 /* Duplicate Subtool */
 
@@ -324,6 +313,17 @@
 ]
 [ISlider, ZPlugin:atom:copies, 1,1,1,20, "number of copies", ,]
 
+
+/*Close Holes*/
+[IButton,"ZPlugin:atom:close holes","close holes with specific resolution",
+  [Note, "this shit doesn't work yet"]
+]
+[ISlider, ZPlugin:atom:resolution, 1,1,1,20, "resolution of hole fill", ,]
+
+/*Remove Surface Definitiion*/
+[IButton,"ZPlugin:atom:remove surface","smooths out scan data",
+  [Note, "this shit doesn't work yet"]
+]
 /*Retain Polygroups*/
 [IButton,"ZPlugin:atom:retain pgroups","keeps polygroups from a subtool and applies them to an imported version with the same uvs",
   [Note, "this shit doesn't work yet"]
