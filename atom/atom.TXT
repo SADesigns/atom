@@ -302,3 +302,24 @@
   [Note, [StrMerge, SubtoolName, " has been copied ", [IGet, ZPlugin:atom:copies]," times"]]
 ]
 [ISlider, ZPlugin:atom:copies, 1,1,1,20, "number of copies", ,]
+
+/*Retain Polygroups*/
+[IButton,"ZPlugin:atom:retain pgroups","keeps polygroups from a subtool and applies them to an imported version with the same uvs",
+  [Note, "this shit doesn't work yet"]
+]
+
+/*Remove Surface Definitiion*/
+[IButton,"ZPlugin:atom:remove surface","smooths out scan data",
+  [Note, "this shit doesn't work yet"]
+]
+
+/*Close Holes*/
+[IButton,"ZPlugin:atom:close holes","close holes with specific resolution",
+  [Note, "this shit doesn't work yet"]
+]
+[ISlider, ZPlugin:atom:resolution, 1,1,1,20, "resolution of hole fill",[Note, "this shit doesn't work yet"],]
+
+/*Multi Import*/
+[IButton,"ZPlugin:atom:multi import","import files from a specific folder into individual subtools",
+  [Note, "this shit doesn't work yet"]
+]
