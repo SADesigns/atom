@@ -1,0 +1,13 @@
+zbrush zscripts by kessler
+
+Install:
+
+place the atom folder into your ZBRrush Misc Macros directory.
+
+example: 
+
+R8
+C:\Program Files\Pixologic\ZBrush 4R8\ZStartup\Macros\Misc
+
+R7
+C:\Program Files (x86)\Pixologic\ZBrush 4R7\ZStartup\Macros\Misc
