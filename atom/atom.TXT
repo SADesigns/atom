@@ -296,9 +296,9 @@
 
 /*Project Every Subdivision*/
 
-[IButton, "ZPlugin:atom:project sub", "projects on user specified number of subdivisions",  
-	[VarSet, SubtoolName, [IGetTitle, Tool:Subtool:ItemInfo]]  
-	[Loop, [IGet, ZPlugin:atom:divisions]-1, [IPress,Tool:Geometry:Divide][IPress,Tool:SubTool:ProjectAll]] 
+[IButton, "ZPlugin:atom:project sub", "projects on user specified number of subdivisions",
+	[VarSet, SubtoolName, [IGetTitle, Tool:Subtool:ItemInfo]]
+	[Loop, [IGet, ZPlugin:atom:divisions]-1, [IPress,Tool:Geometry:Divide][IPress,Tool:SubTool:ProjectAll]]
 	[Note, [StrMerge, SubtoolName, " has been projected onto ", [IGet, ZPlugin:atom:divisions]-1," divisions"]]
 ]
 [ISlider, ZPlugin:atom:divisions, 1,1,1,10, "number of division to make and project", ,]
@@ -314,9 +314,10 @@
 [ISlider, ZPlugin:atom:copies, 1,1,1,20, "number of copies", ,]
 
 /*WIPS*/
-[IButton,"ZPlugin:atom:||WORKS IN PROGRESS BELOW","about atom",
-  [Note, "thanks for using atom -kessler"]
-,,1,, ,0.2]
+[IButton,"ZPlugin:atom:wips","work in progress below",
+  [Note, "everything below the line are works in progress"]
+,,1,,"line.psd" ,0.2]
+
 
 /*Close Holes*/
 [IButton,"ZPlugin:atom:close holes","close holes with specific resolution",
