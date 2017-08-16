@@ -47,10 +47,10 @@
 [IUnPress,Draw:Mrgb]
 [IUnPress,Draw:Rgb]
 [IUnPress,Draw:M]
-[IPress,Brush:DamStandard]
-[IUnPress,Draw:Mrgb]
-[IUnPress,Draw:Rgb]
-[IUnPress,Draw:M]
+//[IPress,Brush:DamStandard]
+//[IUnPress,Draw:Mrgb]
+//[IUnPress,Draw:Rgb]
+//[IUnPress,Draw:M]
 [IPress,Brush:Deco1]
 [IUnPress,Draw:Mrgb]
 [IUnPress,Draw:Rgb]
@@ -199,10 +199,10 @@
 [IUnPress,Draw:Mrgb]
 [IUnPress,Draw:Rgb]
 [IUnPress,Draw:M]
-[IPress,Brush:Paint]
-[IUnPress,Draw:Mrgb]
-[IUnPress,Draw:Rgb]
-[IUnPress,Draw:M]
+//[IPress,Brush:Paint]
+//[IUnPress,Draw:Mrgb]
+//[IUnPress,Draw:Rgb]
+//[IUnPress,Draw:M]
 [IPress,Brush:PenA]
 [IUnPress,Draw:Mrgb]
 [IUnPress,Draw:Rgb]
@@ -296,9 +296,9 @@
 
 /* Duplicate Subtool */
 
-[IButton, "ZPlugin:atom:duplicate sub", "duplicates subtool",
+[IButton, "ZPlugin:atom:copy sub", "copies subtool",
   [VarSet, SubtoolName, [IGetTitle, Tool:Subtool:ItemInfo]]
   [Loop, [IGet, ZPlugin:atom:copies], [IPress, Tool:SubTool:Duplicate]]
-  [Note, [StrMerge, SubtoolName, " has been copied ", [IGet, ZPlugin:atom:duplicates]," times"]]
+  [Note, [StrMerge, SubtoolName, " has been copied ", [IGet, ZPlugin:atom:copies]," times"]]
 ]
-[ISlider, ZPlugin:atom:copies, 1,1,1,20, "number of duplicates", ,]
+[ISlider, ZPlugin:atom:copies, 1,1,1,20, "number of copies", ,]
