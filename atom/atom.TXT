@@ -317,7 +317,7 @@
 /*Close Holes*/
 
 [IButton,"ZPlugin:atom:close hole","close holes with specific resolution",
-  [IColorSet,185,66,66]
+  [IColorSet,0,0,0]
   [IPress,Color:FillObject]
   [IColorSet,255,255,255]
   [IPress,Tool:Geometry:Close Holes]
@@ -327,14 +327,16 @@
   [IPress,Tool:Visibility:HidePt]
   [ISet,Tool:Geometry:Target Polygons Count,[IGet, "ZPlugin:atom:hole res"]]
   [FileNameSetNext,"C:\Users\Public\Documents/ZBrushData/Temp/objIn.goz"][IPress,Tool:Geometry:ZRemesher]
+  [ISet,Tool:Deformation:Relax,10000]
   [IPress,Tool:Masking:Clear]
+  [IPress,Tool:Polygroups:Auto Groups]
   [IPress,Material:Flat Color]
   [IColorSet,255,255,255]
   [IPress,Color:FillObject]
   [IPress,Material:MatCap Red Wax]
   [Note, "holes have been filled. you may want to go around and smooth them out a bit"]
 ]
-[ISlider, "ZPlugin:atom:hole res", 0,0.1,0,3, "resolution of hole fill",,,0.5]
+[ISlider, "ZPlugin:atom:hole res", 0,1,0,20, "resolution of hole fill",,,0.5]
 
 
 /* Duplicate Subtool */
