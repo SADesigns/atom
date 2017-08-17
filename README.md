@@ -1,9 +1,6 @@
 ![alt text](https://github.com/thekesslereffect/atom/blob/master/atom/atom.png)
 
-by kessler
-
-
-welcome to atom 
+by kessler 
 
 alpha v1.0
 
