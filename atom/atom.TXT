@@ -338,3 +338,9 @@
 [IButton,"ZPlugin:atom:multi import","import files from a specific folder into individual subtools",
   [Note, "this shit doesn't work yet"]
 ]
+
+/*ZTL OBJ Export*/
+[IButton,"ZPlugin:atom:ztl/obj export","export ztl and obj to specific folder",
+  [Note, "this shit doesn't work yet"]
+]
+[ISlider, "ZPlugin:atom:lvl", 1,1,1,20, "subdivision level to export obj at", ,]
