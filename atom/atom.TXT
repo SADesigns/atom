@@ -1,12 +1,20 @@
-[ISubPalette,"ZPlugin:atom"]
+// atom
+// by kessler
+// v1.0, 2017
 
-
+///////////////////////// variables
 [VarDef, SubtoolName,""]
 
 
+///////////////////////// menu
+[ISubPalette,"ZPlugin:atom"]
+
+
+///////////////////////// atom
+
 /*Logo*/
 [IButton,"ZPlugin:atom:atom","about atom",
-  [Note, "thanks for using atom -kessler"]
+  [Note, "atom v1.0"]
 ,,1,,"atom.psd",0.25]
 
 
