@@ -303,6 +303,28 @@
 ]
 [ISlider, ZPlugin:atom:divisions, 1,1,1,10, "number of division to make and project", ,]
 
+/*Close Holes*/
+
+[IButton,"ZPlugin:atom:close hole","close holes with specific resolution",
+  [IColorSet,185,66,66]
+  [IPress,Color:FillObject]
+  [IColorSet,255,255,255]
+  [IPress,Tool:Geometry:Close Holes]
+  [IPress,Tool:Masking:Mask By Intensity]
+  [IPress,Tool:Masking:ShrinkMask]
+  [IPress,Tool:Masking:Inverse]
+  [IPress,Tool:Visibility:HidePt]
+  [ISet,Tool:Geometry:Target Polygons Count,[IGet, "ZPlugin:atom:hole res"]]
+  [FileNameSetNext,"C:\Users\Public\Documents/ZBrushData/Temp/objIn.goz"][IPress,Tool:Geometry:ZRemesher]
+  [IPress,Tool:Masking:Clear]
+  [IPress,Material:Flat Color]
+  [IColorSet,255,255,255]
+  [IPress,Color:FillObject]
+  [IPress,Material:MatCap Red Wax]
+  [Note, "holes have been filled. you may want to go around and smooth them out a bit"]
+]
+[ISlider, "ZPlugin:atom:hole res", 0,0.1,0,3, "resolution of hole fill", ,]
+
 
 /* Duplicate Subtool */
 
@@ -319,11 +341,7 @@
 ,,1,,"line.psd" ,0.2]
 
 
-/*Close Holes*/
-[IButton,"ZPlugin:atom:close holes","close holes with specific resolution",
-  [Note, "this shit doesn't work yet"]
-]
-[ISlider, ZPlugin:atom:resolution, 1,1,1,20, "resolution of hole fill", ,]
+
 
 /*Remove Surface Definitiion*/
 [IButton,"ZPlugin:atom:remove surface","smooths out scan data",
