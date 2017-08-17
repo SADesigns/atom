@@ -1,4 +1,6 @@
 [ISubPalette,"ZPlugin:atom"]
+
+
 [VarDef, SubtoolName,""]
 
 
@@ -7,6 +9,14 @@
   [Note, "thanks for using atom -kessler"]
 ,,1,,"atom.psd",0.25]
 
+
+/* Delete Floaters */
+
+[IButton,"ZPlugin:atom:delete floaters","deletes floating geometry",
+[IPress,Tool:SubTool:Split To Parts]
+[IPress,Tool:SubTool:Del Other]
+[Note, "all floaters have been removed"]
+,,0.5,,"",0.1]
 
 /*noRGB*/
 
@@ -284,24 +294,17 @@
 [IPress,Brush:Standard]
 [IPress,Brush:R]
 [Note, "rgb, mrgb, and m have been disabled for all brushes"]
-]
-
-/* Delete Floaters */
-
-[IButton,"ZPlugin:atom:delete floaters","deletes floating geometry",
-[IPress,Tool:SubTool:Split To Parts]
-[IPress,Tool:SubTool:Del Other]
-[Note, "all floaters have been removed"]
-]
+,,0.5,, ,0.1]
 
 /*Project Every Subdivision*/
 
-[IButton, "ZPlugin:atom:project sub", "projects on user specified number of subdivisions",
+[IButton, "ZPlugin:atom:project sub", "subdivides and projects on each subdivision created",
 	[VarSet, SubtoolName, [IGetTitle, Tool:Subtool:ItemInfo]]
-	[Loop, [IGet, ZPlugin:atom:divisions]-1, [IPress,Tool:Geometry:Divide][IPress,Tool:SubTool:ProjectAll]]
-	[Note, [StrMerge, SubtoolName, " has been projected onto ", [IGet, ZPlugin:atom:divisions]-1," divisions"]]
+	[Loop, [IGet, "ZPlugin:atom:subdiv lvls"]-1, [IPress,Tool:Geometry:Divide][IPress,Tool:SubTool:ProjectAll]]
+	[Note, [StrMerge, SubtoolName, " has been projected onto ", [IGet, "ZPlugin:atom:subdiv lvls"]-1," divisions"]]
 ]
-[ISlider, ZPlugin:atom:divisions, 1,1,1,10, "number of division to make and project", ,]
+
+[ISlider, "ZPlugin:atom:subdiv lvls", 1,1,1,10, "number of division to make and project",,,0.5]
 
 /*Close Holes*/
 
@@ -323,7 +326,7 @@
   [IPress,Material:MatCap Red Wax]
   [Note, "holes have been filled. you may want to go around and smooth them out a bit"]
 ]
-[ISlider, "ZPlugin:atom:hole res", 0,0.1,0,3, "resolution of hole fill", ,]
+[ISlider, "ZPlugin:atom:hole res", 0,0.1,0,3, "resolution of hole fill",,,0.5]
 
 
 /* Duplicate Subtool */
@@ -333,7 +336,7 @@
   [Loop, [IGet, ZPlugin:atom:copies], [IPress, Tool:SubTool:Duplicate]]
   [Note, [StrMerge, SubtoolName, " has been copied ", [IGet, ZPlugin:atom:copies]," times"]]
 ]
-[ISlider, ZPlugin:atom:copies, 1,1,1,20, "number of copies", ,]
+[ISlider, ZPlugin:atom:copies, 1,1,1,20, "number of copies",,,0.5]
 
 /*WIPS*/
 [IButton,"ZPlugin:atom:wips","work in progress below",
