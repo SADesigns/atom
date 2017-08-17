@@ -11,3 +11,7 @@ C:\Program Files\Pixologic\ZBrush 4R8\ZStartup\Macros\Misc
 
 R7
 C:\Program Files (x86)\Pixologic\ZBrush 4R7\ZStartup\Macros\Misc
+
+menu location:
+
+you can find atom in the zplugin menu in zbrush
